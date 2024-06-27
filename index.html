@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-g45bjVGD8TDg2+oiXsKaWbrMcxrOy4ExFOw5TWu0Oz+ZcW2XNau7FbM81O5vlkOkEhr9kZ9mumv+IqoatYVVGg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Experiment</title>
+</head>
+<body>
+    <div class="moon-text">
+        <div class="moon">Yoni</div>
+        <div class="lore-popup">Lorekpasio</div>
+    </div>
+    <div class="haha">
+        <img class="logo" src="gyuigyugyuimoon.jpg" alt="Logo">
+        <h1 class="title">Login</h1>
+        <label class="user" for="uname"><i class="fas fa-user fa-thin"></i> Username</label>
+        <input type="text" placeholder="Enter Username" name="uname">
+        <label class="pass" for="puname"><i class="fas fa-eye-slash fa-thin"></i> Password</label>
+        <input type="password" placeholder="Enter Password">
+        <button class="Login">Login</button>
+    </div>
+
+    <div class="popup-background">
+        <div class="popup-content">
+            <div class="popup-close"><i class="fas fa-times"></i></div>
+            <div class="popup-title">ITS OVER!1! DIECH MASO
+                VERSO LAPO LOREKPASIO JEMO RASEI8@ VARTSKIP NORASIPO LAKOSAP!!!!!
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.Login').addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent form submission (if any)
+
+                // Perform your login validation here (for demonstration purposes, skipping validation)
+                var username = document.querySelector('input[name="uname"]').value;
+                var password = document.querySelector('input[type="password"]').value;
+
+                // Show popup after 2 seconds
+                setTimeout(function() {
+                    document.querySelector('.popup-background').classList.add('show');
+                }, 2000); // Adjust timing as needed for your transitions and animations
+
+                // Perform other actions or transitions here after login button click
+                // Example: Flashing transformations, etc.
+            });
+
+            document.querySelector('.popup-close').addEventListener('click', function() {
+                document.querySelector('.popup-background').classList.remove('show');
+                document.body.classList.add('flash');
+                setTimeout(function() {
+                    document.body.classList.remove('flash');
+                }, 2000); // Duration of the flashing effect
+            });
+        });
+    </script>
+</body>
+</html>
